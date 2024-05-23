@@ -23,7 +23,7 @@ const Home = () => {
     const formData = new FormData()
     formData.append('file', selectedFile)
     try {
-        const response =await axios.post("http://localhost:8000/convertFile",formData,{
+        const response =await axios.post("https://wordtopdf-myot.onrender.com/convertFile",formData,{
             responseType: "blob",
         });
         const url = window.URL.createObjectURL(new Blob([response.data]))
